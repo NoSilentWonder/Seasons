@@ -1,0 +1,26 @@
+Seasons
+
+Seasons is a 3D scene to demonstrate the graphical capabilities of DirectX 10 through the use of effect files utilising pixel and vertex shaders, stencil and depth buffering, lighting, the use of textures and materials, world, view and projection transformations, and user interaction with the mouse and keyboard.
+
+The scene contains a number of different features:
+
+A skymap is used in each seasonal state of the scene. This is created from a cube texture projected onto a sphere by the vertex shader that is centred on the camera at all times and rendered to the far plane.
+
+Terrain in the scene is generated from a height map and rendered using a blend map to combine three different textures in the pixel shader. A fogging effect is also applied to the terrain and shading based on a single directional vector representing the sun is performed.
+
+A 3D model of a tree is loaded into a DirectX mesh. A shadow map is generated from this mesh and then used to render the tree with lighting and shadows.
+
+A particle system and three particle effect files are used to create rain, blowing leaves and snow particle effects for the scene. A geometry shader is used to create new particles and a second geometry shader is used to expand the single particle points into camera facing line strips or quads. 
+
+Controls
+
+The user has control of the position of the camera. This can be moved freely in all directions throughout the scene. The user can also switch between the different seasons of the scene or reset the particle system.
+
+Left mouse button + mouse movement 	Rotates the camera about the X- and Y-axes
+Arrow keys 		Rotates the camera about the X- and Y-axes
+W  	Moves the camera forward
+S 	Moves the camera backward 
+A 		Moves the camera left
+D 	Moves the camera right
+R 	Resets the particle systems
+1 		Switches to the next state in the scene
